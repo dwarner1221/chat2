@@ -4,8 +4,8 @@ define(HOST, 'localhost');
 define(USERNAME, 'db_user');
 define(PASSWORD, 'db_password');
 
-   mysql_connect( HOST, USERNAME, PASSWORD) or die("Could not connect");
-   mysql_select_db ("chat2_db")or die('Cannot connect to the database because: ' . mysql_error());
+   pg_connect("dbname=chat2_db host=HOST user=USERNAME password=PASSWORD") or die("Could not connect");
+  
 
 //functions
 function checkVar($var)
@@ -22,8 +22,8 @@ function checkVar($var)
 	}
 }
 function hasData($query)
-{	$rows = mysql_query($query)or die("somthing is wrong");
-	$results = mysql_num_rows($rows);
+{	$rows = pg_query($query)or die("somthing is wrong");
+	$results = pg_num_rows($rows);
 	if($results == 0)
 	{
 		return false;  

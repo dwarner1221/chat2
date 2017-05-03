@@ -51,7 +51,7 @@
     					NULL , '$username', '1', '$now'
     					)";
     					
-    		    mysql_query($postUsers);
+    		    pg_query($postUsers);
     		    			
     			$_SESSION['userid'] = $username;
     		
