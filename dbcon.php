@@ -1,10 +1,7 @@
 <?php
 //Connection Page
-define(HOST, 'localhost');
-define(USERNAME, 'db_user');
-define(PASSWORD, 'db_password');
 
-   pg_connect("dbname=chat2_db host=HOST user=USERNAME password=PASSWORD") or die("Could not connect");
+   pg_connect("dbname=d76f42e9b1a7ha host=ec2-54-225-182-108.compute-1.amazonaws.com user=fpyijrtsiwybaq password=3f25985862a57e2382ba5bd8acbde65854210c4eab7f15427552bd542f3f9301") or die("Could not connect");
   
 
 //functions
